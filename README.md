@@ -1,2 +1,19 @@
-# alu-interview
-Academics Related ALU Interview Repo
+
+# ALU Technical Interviews Preparations
+
+This repository contains resources to help you prepare for technical interviews at African Leadership University (ALU). It includes coding challenges, interview tips, and guidance on common interview formats.
+
+## Contents
+
+- **Coding Challenges**: Practice problems to build problem-solving skills.
+- **Interview Tips**: Strategies for excelling in technical interviews.
+- **Resources**: Links to tutorials, articles, and more.
+
+## How to Use
+
+1. **Clone the repo**:  
+   ```bash
+   git clone https://github.com/Best-Verie/alu-interview.git
+   ```
+2. **Navigate through the folders** to find practice questions and tips.
+
