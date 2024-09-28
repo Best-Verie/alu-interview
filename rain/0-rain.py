@@ -1,34 +1,19 @@
 #!/usr/bin/python3
-"""
-Module to calculate how much rainwater is retained after it rains.
+"""calculates how much rain will be trapped after it rains
 """
 
 
 def rain(walls):
+    """calculates how much rain will be trapped after it rains
     """
-    Calculate how many square units of water will be retained after it rains.
-
-    Arguments:
-    walls -- list of non-negative integers representing wall heights
-
-    Returns:
-    Integer indicating total amount of rainwater retained.
-    """
-    if not walls:
+    if not walls or len(walls) < 3:
         return 0
 
-    left, right = 0, len(walls) - 1
-    left_max, right_max = 0, 0
-    water = 0
-
-    while left < right:
-        if walls[left] <= walls[right]:
-            left_max = max(left_max, walls[left])
-            water += left_max - walls[left]
-            left += 1
-        else:
-            right_max = max(right_max, walls[right])
-            water += right_max - walls[right]
-            right -= 1
-
-    return water
+    rain = 0
+    for i in range(1, len(walls) - 1):
+        left = max(walls[:i])
+        right = max(walls[i + 1:])
+        min_wall = min(left, right)
+        if walls[i] < min_wall:
+            rain += min_wall - walls[i]
+    return rain
